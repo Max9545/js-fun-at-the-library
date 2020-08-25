@@ -1,16 +1,23 @@
-function shelfBook(book, sciFiShelf) {
-  if (book.genre === 'sciFi') {
-    sciFiShelf.unshift(book)
-  };
-  if (sciFiShelf.length > 3) {
-    sciFiShelf.shift()
-  };
-};
+// function shelfBook(book, sciFiShelf) {
+//   if (book.genre === 'sciFi') {
+//     sciFiShelf.unshift(book)
+//   };
+//   if (sciFiShelf.length > 3) {
+//     sciFiShelf.shift()
+//   };
+// };
 
-function unshelfBook(bookTitle, sciFiShelf) {
-for (var i = 0; i < sciFiShelf.length; i++) {
-  if(sciFiShelf[i].title === bookTitle) {
-    sciFiShelf.splice(i,1);
+function shelfBook(book, shelf) {
+  shelf.unshift(book);
+  if (shelf.length > 3) {
+    shelf.shift()
+  }
+}
+
+function unshelfBook(book, shelf) {
+for (var i = 0; i < shelf.length; i++){
+  if(shelf[i].title === book) {
+    shelf.splice(i,1);
     }
   }
 };

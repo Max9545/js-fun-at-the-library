@@ -4,14 +4,25 @@ function createTitle(bookName) {
   return bookIdea
 }
 
-function buildMainCharacter(name, age, pronouns) {
-  var ghoulCharacter = {
-    name: "Vassya",
-    age: 16,
-    pronouns: "she/her"
+
+function buildMainCharacter(newName, newAge, newPronouns) {
+  var newCharacter = {
+    name: newName,
+    age: newAge,
+    pronouns: newPronouns,
+  }
+  return newCharacter
 }
-  return ghoulCharacter;
-}
+
+
+// function buildMainCharacter(name, age, pronouns) {
+//   var ghoulCharacter = {
+//     name: "Vassya",
+//     age: 16,
+//     pronouns: "she/her"
+// }
+//   return ghoulCharacter;
+// }
 
 function saveReview(title, review) {
   if (!review.includes(title)) {
